@@ -8,9 +8,4 @@ import java.util.List;
 
 @Repository
 public interface ImageRepository extends JpaRepository<Image, Integer> {
-
-
-    Integer countImages(Integer id, String screenDimensions);
-
-    List<Image> findByDimensions(String screenDimensions);
 }
