@@ -22,9 +22,10 @@ public class ImageService {
         image.setDescription(description);
         image.setDimensions(dimensions);
         image.setBlog(blog);
-        Image savedImage=imageRepository2.save(image);
+
         blog.getImageList().add(image);
-        return savedImage;
+        blogRepository2.save(blog);
+        return image;
     }
 
     public void deleteImage(Integer id){
