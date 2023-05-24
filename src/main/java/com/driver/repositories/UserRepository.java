@@ -12,6 +12,5 @@ import java.util.List;
 
 @Repository
 public interface UserRepository extends CrudRepository<User, Integer> {
-    @Query(value = "select * from user as s where s.id=:id",nativeQuery = true)
-    void updateUser(Integer id, String password);
+
 }
